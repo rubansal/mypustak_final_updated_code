@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+****
+@author: Anubhav Kumar
+****
+-->
+<!-- CONTAINER OF RECYCLERVIEW IS IN ADDRESS CONTAINER -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DeliveryAddress">
+
+    <RelativeLayout
+        android:id="@+id/maintop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:minHeight="?android:attr/actionBarSize"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/navigationnn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/cross"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECT DELIVERY ADDRESS"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/delivery_progress"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/maintop"
+        android:layout_above="@+id/address_button"
+        android:id="@+id/address_recyclerview"></android.support.v7.widget.RecyclerView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/blue_button"
+        android:text="ADD A NEW ADDRESS"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:id="@+id/address_button"/>
+
+
+</RelativeLayout>

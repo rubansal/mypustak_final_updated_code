@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/engineering"
+        android:title="Engineering"/>
+    <item
+        android:id="@+id/novel"
+        android:title="Novel"/>
+    <item
+        android:id="@+id/ncert"
+        android:title="NCERT" />
+    <item
+        android:id="@+id/others"
+        android:title="Others"/>
+</menu>

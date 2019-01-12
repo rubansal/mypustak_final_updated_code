@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+****
+@author: Anubhav Kumar
+****
+-->
+<!-- coupons container-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MyCoupons">
+
+
+    <RelativeLayout
+        android:id="@+id/maintop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:minHeight="?android:attr/actionBarSize"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/navigationnn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/cross"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MY COUPONS"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="20.5sp"/>
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/relative_textview"
+        android:layout_below="@id/maintop"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/my_coupons_recycler"></android.support.v7.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:id="@+id/relative_textview">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_coupons_textview"
+            android:background="@color/white"
+            android:text="How Coupon works:"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_coupons_instruction"
+            android:layout_below="@id/my_coupons_textview"
+            android:padding="5dp"
+
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

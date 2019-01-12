@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">mypushtak</string>
+    <string name="search_hint">Search</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="FACEBOOK_APP_ID">251181352186944</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">506197caeda032e5ee0f40c775f75062</string>
+
+    //506197caeda032e5ee0f40c775f75062 mine 251181352186944
+    <!--95b44d2a5b9eebef40a85a0f95192973    --> //foddcubo 258082951710531
+    // if your Facebook App ID is 1234567, you should use ak1234567
+    <string name="ak_login_protocol_scheme">ak251181352186944</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Rs">\u20B9</string>
+    <string name="facebook_app_id">351371148990690</string>
+    <string name="fb_login_protocol_scheme">fb351371148990690</string>
+
+    <string name="rs">\u20A8</string>
+</resources>

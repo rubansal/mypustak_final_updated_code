@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CaptchaConfirmation">
+
+    <include layout="@layout/general_toolbar"
+        android:id="@+id/maintop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/confirm_button"
+        android:layout_below="@id/maintop"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:id="@+id/captcha_address"
+                android:text="111"
+                android:textSize="18sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/captcha_address"
+                android:id="@+id/captcha_Price"
+                android:textSize="20sp"
+                android:text="111"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/captcha_edit"
+                android:padding="20dp"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:text="1"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:id="@+id/random1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:text="+"
+                    android:gravity="center"
+                    android:textSize="50sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:text="20"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:id="@+id/random2"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white_button"
+                android:hint="Enter Final Value"
+                android:padding="10dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/captcha_edit"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/blue_button"
+        android:text="Confirm"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:id="@+id/confirm_button"/>
+
+</RelativeLayout>

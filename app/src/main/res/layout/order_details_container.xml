@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="BOOK NAME"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="15sp"-->
+        <!--android:textColor="#000"-->
+        <!--android:id="@+id/order_details_container_book_name"/>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="2"-->
+        <!--android:padding="10dp">-->
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="MRP: "-->
+                <!--android:textAlignment="viewEnd"-->
+                <!--android:textColor="#000"-->
+                <!--android:textSize="14.5sp"-->
+                <!--android:id="@+id/order_details_container_book_mrp"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Shipping+Handelling: "-->
+                <!--android:textAlignment="viewEnd"-->
+                <!--android:textColor="#000"-->
+                <!--android:textSize="14.5sp"-->
+                <!--android:id="@+id/order_details_container_book_shipping"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="COD: "-->
+                <!--android:textAlignment="viewEnd"-->
+                <!--android:textColor="#000"-->
+                <!--android:textSize="14.5sp"-->
+                <!--android:id="@+id/order_details_container_book_cod"/>-->
+
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Faster: "-->
+                <!--android:textAlignment="viewEnd"-->
+                <!--android:textColor="#000"-->
+                <!--android:textSize="14.5sp"-->
+                <!--android:id="@+id/order_details_container_book_faster"/>-->
+
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Coupon Discount: "-->
+                <!--android:textAlignment="viewEnd"-->
+                <!--android:textColor="#000"-->
+                <!--android:textSize="14.5sp"-->
+                <!--android:id="@+id/order_details_container_book_coupon"/>-->
+
+
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAlignment="viewEnd"-->
+                <!--android:textColor="#000"-->
+                <!--android:textSize="14.5sp"-->
+                <!--android:text="You Pay:"-->
+                <!--android:id="@+id/order_details_container_book_pay"-->
+                <!--/>-->
+
+
+        <!--</LinearLayout>-->
+
+
+
+
+
+    <!--</LinearLayout>-->
+
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Book Name"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textAlignment="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center_vertical"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4"
+    android:layout_below="@id/order_details_linear_first"
+    android:id="@+id/book_detailbox"
+    android:background="@color/white"
+    android:layout_margin="15dp"
+    android:padding="5dp">
+
+    <ImageView
+    android:layout_width="0dp"
+    android:layout_height="100dp"
+    android:layout_weight="1"
+    android:layout_marginLeft="10dp"
+    android:background="@mipmap/ic_launcher"
+    android:layout_gravity="center"
+    android:id="@+id/orders_details_book_image"
+    />
+
+    <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="120dp"
+    android:layout_weight="2"
+    android:weightSum="5"
+    android:orientation="vertical">
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+        android:textColor="#000"
+    android:text="Book Name"
+        android:maxLines="1"
+    android:textAlignment="center"
+    android:gravity="center_vertical"
+        android:id="@+id/order_details_container_book_name"
+    />
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:text="Book Condition:"
+    android:textAlignment="textEnd"
+    android:gravity="center_vertical"
+    />
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:text="QTY:"
+    android:textAlignment="textEnd"
+    android:gravity="center_vertical"
+    />
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:text="MRP:"
+    android:textAlignment="textEnd"
+    android:gravity="center_vertical"
+    />
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:text="Shipping+Handling :"
+    android:textAlignment="textEnd"
+    android:gravity="center_vertical"
+    />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:weightSum="5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="MRP :"
+                android:gravity="center"
+                android:id="@+id/order_details_container_book_condition"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/order_details_container_book_qty"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/order_details_container_book_mrp"
+                android:gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/order_details_container_book_pay"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>
+</LinearLayout>

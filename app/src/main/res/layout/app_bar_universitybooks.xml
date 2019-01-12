@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:showIn="@layout/activity_universitybooks">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MainActivity.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:popupTheme="@style/MainActivity.PopupOverlay" />
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:padding="15dp"
+                android:src="@drawable/search_icon" />
+
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:padding="15dp"
+                android:src="@drawable/home_icon" />
+
+            <ImageView
+                android:layout_width="148.5dp"
+                android:layout_height="42.5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/home_icon"
+                android:src="@drawable/mypustak_logo" />
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f8f8f8"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_universitybooks">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/school_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/school" />
+
+                <TextView
+                    style="@style/BookTextView"
+                    android:layout_below="@+id/school_image"
+                    android:text="School Books" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/university_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/university" />
+
+                <TextView
+                    style="@style/BookTextView"
+                    android:layout_below="@+id/university_image"
+                    android:text="University Books" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/competitive_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/competitve" />
+
+                <TextView
+                    style="@style/BookTextView"
+                    android:layout_below="@+id/competitive_image"
+                    android:text="Competition Exams" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/fiction_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/fiction" />
+
+                <TextView
+                    style="@style/BookTextView"
+                    android:layout_below="@+id/fiction_image"
+                    android:text="Fiction Books" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/engineering_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/engg" />
+
+                <TextView
+                    style="@style/BookTextView"
+                    android:layout_below="@+id/engineering_image"
+                    android:text="Engineering" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/finance_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/finance" />
+
+                <TextView
+                    style="@style/BookTextView"
+                    android:layout_below="@+id/finance_image"
+                    android:text="Finance" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/medical_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/medical" />
+
+                <TextView
+                    style="@style/BookTextView"
+                    android:layout_below="@+id/medical_image"
+                    android:text="Medical" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/scienceandarts_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/sci" />
+
+                <TextView
+                    android:id="@+id/science_text"
+                    style="@style/BookTextViewWithoutBottom"
+                    android:layout_below="@+id/scienceandarts_image"
+                    android:text="Science" />
+
+                <TextView
+                    style="@style/BookTextView"
+                    android:layout_below="@+id/science_text"
+                    android:text="and Arts" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/otheruniversity_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/others" />
+
+                <TextView
+                    style="@style/BookTextView"
+                    android:layout_below="@+id/otheruniversity_image"
+                    android:text="Others" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/engineering_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/aeronautical_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/aeronautical" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/aeronautical_image"
+                        android:text="Aeronautical" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/bio_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/bio" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/bio_image"
+                        android:text="Biotechnology" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/chem_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/chem" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/chem_image"
+                        android:text="Chemical" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/civil_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/civil" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/civil_image"
+                        android:text="Civil" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/compsc_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/comp_sc" />
+
+                    <TextView
+                        android:id="@+id/compsc_text"
+                        style="@style/BookTextViewWithoutBottom"
+                        android:layout_below="@+id/compsc_image"
+                        android:text="Computer" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/compsc_text"
+                        android:text="Science" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/electrical_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/electrical" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/electrical_image"
+                        android:text="Electrical" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/electronic_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/electronic" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/electronic_image"
+                        android:text="Electronics" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/marine_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/marine" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/marine_image"
+                        android:text="Marine" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/mechanical_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/mechanical" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/mechanical_image"
+                        android:text="Mechanical" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/othersengineering_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/others2" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/othersengineering_image"
+                        android:text="Other" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/medical_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ayur_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/ayur" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/ayur_image"
+                        android:text="Ayurveda" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/dental_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/dental" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/dental_image"
+                        android:text="Dental" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/mbbs_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/mbbs" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/mbbs_image"
+                        android:text="MBBS" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/pharm_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/pharm" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/pharm_image"
+                        android:text="Pharmacy" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/pg_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/pg" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/pg_image"
+                        android:text="PG" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/othermedical_image"
+                        style="@style/BookImageView"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/others2" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/othermedical_image"
+                        android:text="Other" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scienceandarts_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ba_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/ba" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/ba_image"
+                        android:text="B.Arts" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/bca_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/bca" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/bca_image"
+                        android:text="BCA" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/bsc_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/bsc" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/bsc_image"
+                        android:text="B.Sc" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ma_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/ma" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/ma_image"
+                        android:text="M.A." />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/msc_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/msc" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/msc_image"
+                        android:text="M.Sc" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/mca_image"
+                        style="@style/BookImageView"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/mca" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/mca_image"
+                        android:text="Other" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otheruniversity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/bba_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/bba" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/bba_image"
+                        android:text="B.B.A" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/bcom_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/bcom" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/bcom_image"
+                        android:text="B.com" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/law_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/law" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/law_image"
+                        android:text="LAW" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/mba_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/mba" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/mba_image"
+                        android:text="M.B.A" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/mcom_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/mcom" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/mcom_image"
+                        android:text="M.com" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/phd_image"
+                        style="@style/BookImageView"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/phd" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/phd_image"
+                        android:text="PhD" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/otheruniversitypart_image"
+                        style="@style/BookImageView"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/others2" />
+
+                    <TextView
+                        style="@style/BookTextView"
+                        android:layout_below="@+id/otheruniversitypart_image"
+                        android:text="Other" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/content_commonview" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

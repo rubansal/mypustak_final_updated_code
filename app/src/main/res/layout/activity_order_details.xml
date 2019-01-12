@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+****
+@author: Anubhav Kumar
+****
+-->
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.OrderDetails"
+    android:background="#f8f8f8">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/maintop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/white"
+            android:minHeight="?android:attr/actionBarSize"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/navigationnn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@drawable/back_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ORDER DETAILS"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="20.5sp"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/order_details_textview"
+            android:layout_below="@id/maintop"
+            android:background="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="Order Delivery Status Here"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_below="@id/order_details_textview"
+            android:id="@+id/order_details_linear_first"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Placed On:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_placedon"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order No:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_orderno"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Amount:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_total_amount"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Payment Mode:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_payment"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No of books:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_number_books"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Shipping Address:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="15sp"
+                android:paddingLeft="40dp"
+                android:id="@+id/order_details_container_shipping"
+
+                />
+
+
+
+
+
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_details_recycler_view"
+            android:layout_below="@id/order_details_linear_first"></android.support.v7.widget.RecyclerView>
+
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="4"-->
+            <!--android:layout_below="@id/order_details_linear_first"-->
+            <!--android:id="@+id/book_detailbox"-->
+            <!--android:background="@color/white"-->
+            <!--android:layout_margin="15dp"-->
+            <!--android:padding="5dp">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:background="@mipmap/ic_launcher"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:id="@+id/orders_book_image"-->
+                <!--/>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="120dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:weightSum="5"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:text="Book Name"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="Book Condition:"-->
+                    <!--android:textAlignment="textEnd"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="QTY:"-->
+                    <!--android:textAlignment="textEnd"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="MRP:"-->
+                    <!--android:textAlignment="textEnd"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="You Pay:"-->
+                    <!--android:textAlignment="textEnd"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--/>-->
+
+
+
+
+
+
+
+            <!--</LinearLayout>-->
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="120dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:weightSum="5"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+
+                    <!--android:gravity="center"-->
+
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="MRP :"-->
+                    <!--android:gravity="center"-->
+                    <!--android:id="@+id/orders_price"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:id="@+id/orders_shipping"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:id="@+id/orders_cod"-->
+                    <!--android:gravity="center"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:id="@+id/orders_coupon"-->
+                    <!--android:gravity="center"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+
+
+
+
+        <!--</LinearLayout>-->
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/order_details_progress"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_below="@id/order_details_recycler_view"
+            android:id="@+id/payment_summary"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Payment Summary"
+                android:textAlignment="center"
+                android:textSize="15sp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="You Pay:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_you_pay"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="COD:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_total_cod"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Faster:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_total_faster"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Discount:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_discounts"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Price:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_total"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/wallet"
+                android:layout_below="@id/linear_container"
+                android:layout_marginLeft="35dp"
+                android:id="@+id/wallet"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Refund of "
+                android:layout_below="@id/linear_container"
+                android:layout_toRightOf="@id/wallet"
+                android:padding="2dp"
+
+                android:textColor="#000"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/refund_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/linear_container"
+                android:layout_toRightOf="@id/refund_text"
+                android:padding="2dp"
+
+                android:textColor="#000"
+                android:id="@+id/refund_mrp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="credited to wallet."
+                android:layout_below="@id/linear_container"
+                android:layout_toRightOf="@id/refund_mrp"
+                android:padding="2dp"
+
+                android:textColor="#000"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Final Paid Amount:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_final_amount"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Your Total Saving:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:id="@+id/order_details_container_final_saving"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="You Saved:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Trees"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="You Saved:"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Kg of CO2 emission"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</android.support.v4.widget.NestedScrollView>

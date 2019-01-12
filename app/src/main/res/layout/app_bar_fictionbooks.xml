@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:showIn="@layout/activity_fictionbooks">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MainActivity.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:popupTheme="@style/MainActivity.PopupOverlay" />
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:padding="15dp"
+                android:src="@drawable/search_icon" />
+
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:padding="15dp"
+                android:src="@drawable/home_icon" />
+
+            <ImageView
+                android:layout_width="148.5dp"
+                android:layout_height="42.5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/home_icon"
+                android:src="@drawable/mypustak_logo" />
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f8f8f8"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_fictionbooks">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/school_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/school" />
+
+                <TextView
+                    android:layout_below="@+id/school_image"
+                    style="@style/BookTextView"
+                    android:text="School Books" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/university_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/university" />
+
+                <TextView
+                    android:layout_below="@+id/university_image"
+                    style="@style/BookTextView"
+                    android:text="University Books" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/competitive_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/competitve" />
+
+                <TextView
+                    android:layout_below="@+id/competitive_image"
+                    style="@style/BookTextView"
+                    android:text="Competition Exams" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/fiction_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/fiction" />
+
+                <TextView
+                    android:layout_below="@+id/fiction_image"
+                    style="@style/BookTextView"
+                    android:text="Fiction Books" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/fiction1_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/fiction1" />
+
+                <TextView
+                    android:layout_below="@+id/fiction1_image"
+                    style="@style/BookTextView"
+                    android:text="Fiction" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/class_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/self_help" />
+
+                <TextView
+                    android:id="@+id/motivation_text"
+                    android:layout_below="@+id/class_image"
+                    style="@style/BookTextViewWithoutBottom"
+                    android:text="Motivation" />
+
+                <TextView
+                    android:layout_below="@+id/motivation_text"
+                    style="@style/BookTextView"
+                    android:text="and Self Help" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/nonfiction_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/non_fic" />
+
+                <TextView
+                    android:layout_below="@+id/nonfiction_image"
+                    style="@style/BookTextView"
+                    android:text="Non-Fiction" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/religion_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/religion" />
+
+                <TextView
+                    android:id="@+id/religion_text"
+                    android:layout_below="@+id/religion_image"
+                    style="@style/BookTextViewWithoutBottom"
+                    android:text="Religion and"
+                    />
+
+                <TextView
+                    android:layout_below="@+id/religion_text"
+                    style="@style/BookTextView"
+                    android:text="Sprituality" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/others_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/others1" />
+
+                <TextView
+                    android:layout_below="@+id/others_image"
+                    style="@style/BookTextView"
+                    android:text="Others" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fiction_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/comic_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/comic" />
+
+                <TextView
+                    android:id="@+id/comic_text"
+                    android:layout_below="@+id/comic_image"
+                    style="@style/BookTextViewWithoutBottom"
+                    android:text="Comic" />
+
+                <TextView
+                    android:layout_below="@+id/comic_text"
+                    style="@style/BookTextView"
+                    android:text="and Graphic Novels" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/drama_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/drama" />
+
+                <TextView
+                    android:layout_below="@+id/drama_image"
+                    style="@style/BookTextView"
+                    android:text="Drama" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/horror_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/horror" />
+
+                <TextView
+                    android:id="@+id/horror_text"
+                    android:layout_below="@+id/horror_image"
+                    style="@style/BookTextViewWithoutBottom"
+                    android:text="Horror" />
+
+                <TextView
+                    android:layout_below="@+id/horror_text"
+                    style="@style/BookTextView"
+                    android:text="and Thriller" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/humor_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/humor" />
+
+                <TextView
+                    android:layout_below="@+id/humor_image"
+                    style="@style/BookTextView"
+                    android:text="Humour" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/lite_image"
+                    style="@style/BookImageView"
+                    android:src="@drawable/lite" />
+
+                <TextView
+                    android:layout_below="@+id/lite_image"
+                    style="@style/BookTextView"
+                    android:text="Literary" />
+
+            </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/mystry_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/mystry" />
+
+                    <TextView
+                        android:layout_below="@+id/mystry_image"
+                        style="@style/BookTextView"
+                        android:text="Mystery" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/romance_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/romance" />
+
+                    <TextView
+                        android:layout_below="@+id/romance_image"
+                        style="@style/BookTextView"
+                        android:text="Romance" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/sifi_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/sifi" />
+
+                    <TextView
+                        android:layout_below="@+id/sifi_image"
+                        style="@style/BookTextView"
+                        android:text="Science Fiction" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/shortstories_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/short_stories" />
+
+                    <TextView
+                        android:layout_below="@+id/shortstories_image"
+                        style="@style/BookTextView"
+                        android:text="Short Stories" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/teen_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/teen" />
+
+                    <TextView
+                        android:layout_below="@+id/teen_image"
+                        style="@style/BookTextView"
+                        android:text="Teens" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nonfiction_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/astrology_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/astrology" />
+
+                    <TextView
+                        android:layout_below="@+id/astrology_image"
+                        style="@style/BookTextView"
+                        android:text="Astrology" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/business_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/business" />
+
+                    <TextView
+                        android:id="@+id/business_text"
+                        android:layout_below="@+id/business_image"
+                        style="@style/BookTextViewWithoutBottom"
+                        android:text="Business" />
+
+                    <TextView
+                        android:layout_below="@+id/business_text"
+                        style="@style/BookTextView"
+                        android:text="and Management" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/health_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/helath" />
+
+                    <TextView
+                        android:layout_below="@+id/health_image"
+                        style="@style/BookTextView"
+                        android:text="Health" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/historypolitics_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/history_politcs" />
+
+                    <TextView
+                        android:id="@+id/historypolitics_text"
+                        android:layout_below="@+id/historypolitics_image"
+                        style="@style/BookTextViewWithoutBottom"
+                        android:text="History" />
+
+                    <TextView
+                        android:layout_below="@+id/historypolitics_text"
+                        style="@style/BookTextView"
+                        android:text="and Politics" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/sports_image"
+                        style="@style/BookImageView"
+                        android:src="@drawable/sports" />
+
+                    <TextView
+                        android:id="@+id/sports_text"
+                        android:layout_below="@+id/sports_image"
+                        style="@style/BookTextViewWithoutBottom"
+                        android:text="Sports" />
+
+                    <TextView
+                        android:layout_below="@+id/sports_text"
+                        style="@style/BookTextView"
+                        android:text="and Games" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/othernonfiction_image"
+                        style="@style/BookImageView"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/others2" />
+
+                    <TextView
+                        android:layout_below="@+id/othernonfiction_image"
+                        style="@style/BookTextView"
+                        android:text="Others" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/religion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/holybooks_image"
+                style="@style/BookImageView"
+                android:src="@drawable/holy_books" />
+
+            <TextView
+                android:layout_below="@+id/holybooks_image"
+                style="@style/BookTextView"
+                android:text="Holy Books" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/philoshopy_image"
+                style="@style/BookImageView"
+                android:src="@drawable/philoshopy" />
+
+            <TextView
+                android:layout_below="@+id/philoshopy_image"
+                style="@style/BookTextView"
+                android:text="Philoshopy" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/religionpart_image"
+                style="@style/BookImageView"
+                android:src="@drawable/religion" />
+
+            <TextView
+                android:layout_below="@+id/religionpart_image"
+                style="@style/BookTextView"
+                android:text="Religion" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/spiri_image"
+                style="@style/BookImageView"
+                android:src="@drawable/spiri" />
+
+            <TextView
+                android:layout_below="@+id/spiri_image"
+                style="@style/BookTextView"
+                android:text="Spirituality" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/otherreligion_image"
+                style="@style/BookImageView"
+                android:src="@drawable/others2" />
+
+            <TextView
+                android:layout_below="@+id/otherreligion_image"
+                style="@style/BookTextView"
+                android:text="Others" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+        <include layout="@layout/content_commonview"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SignIn">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MainActivity.AppBarOverlay"
+        android:id="@+id/toolbar_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:popupTheme="@style/MainActivity.PopupOverlay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Sign In"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="42.5dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mypustak_logo"
+        android:layout_below="@+id/toolbar_parent"
+        android:layout_marginTop="50dp"
+        android:id="@+id/logo"/>
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="192dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="248dp"
+        android:id="@+id/relative">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/showvisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_visibility"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/showvisibleoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_visibility_off" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signin_progress"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="#008cff"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/relative"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:text="Sign IN"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/signin"
+        android:id="@+id/forgetrelative">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forget Password"
+            android:textSize="18.5sp"
+            android:layout_margin="5dp"
+            android:id="@+id/forget"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  ||  "
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18.5sp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/forget"
+            android:id="@+id/space"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register New Account"
+            android:textSize="18.5sp"
+            android:id="@+id/signup_text"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/space"
+            />
+
+    </RelativeLayout>
+
+
+        <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:src="@drawable/facebook"-->
+            <!--android:layout_toRightOf="@id/signup_text"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:id="@+id/facebook"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:src="@drawable/google"-->
+            <!--android:layout_toRightOf="@id/facebook"-->
+            <!--android:layout_marginLeft="5dp"/>-->
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgetrelative"
+        android:layout_centerHorizontal="true"/>
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@id/google"/>
+
+
+
+
+
+
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:gravity="center">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="42.5dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:src="@drawable/mypustak_logo" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/email"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="Email"-->
+                <!--android:inputType="textEmailAddress" -->
+                <!--/>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/password"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="Password"-->
+                    <!--android:inputType="textPassword" />-->
+
+                <!--<ProgressBar-->
+                    <!--android:id="@+id/progressBar"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:visibility="gone"/>-->
+
+                <!--<FrameLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_alignParentRight="true">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/showvisible"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:src="@drawable/ic_visibility"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/showvisibleoff"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/ic_visibility_off" />-->
+
+                <!--</FrameLayout>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/signup"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#008cff"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="40dp"-->
+                <!--android:textSize="24sp"-->
+                <!--android:text="SignUp"/>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+</RelativeLayout>

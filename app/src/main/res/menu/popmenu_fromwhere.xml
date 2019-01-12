@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/quoradigest"
+        android:title="Quora Digest"/>
+    <item
+        android:id="@+id/google"
+        android:title="Google"/>
+    <item
+        android:id="@+id/facebook"
+        android:title="Facebook" />
+    <item
+        android:id="@+id/yahoo"
+        android:title="Yahoo"/>
+    <item
+        android:id="@+id/twitter"
+        android:title="Twitter"/>
+    <item
+        android:id="@+id/others"
+        android:title="Others"/>
+    <item
+        android:id="@+id/newpaper"
+        android:title="Newpaper"/>
+</menu>

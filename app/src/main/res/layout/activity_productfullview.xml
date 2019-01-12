@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.productfullview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f8f8f8"
+            tools:context=".Activity.Donation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include
+                    android:id="@+id/productfullview_toolbar"
+                    layout="@layout/general_toolbar" />
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_title"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/tv_title"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:src="@drawable/share_icon" />-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/cart_image"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_toRightOf="@+id/tv_title"-->
+                    <!--android:src="@drawable/cart_add_icon" />-->
+
+            <!--</RelativeLayout>-->
+
+        <!--<include-->
+        <!--layout="@layout/toolbar_productfull"-->
+        <!--android:id="@+id/toolbar_product"/>-->
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/productfullview_toolbar">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+                <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="300dp"-->
+                <!--app:cardElevation="4dp"-->
+                <!--android:id="@+id/cardview"-->
+                <!--android:layout_margin="20dp"-->
+                <!--app:cardCornerRadius="0dp"-->
+                <!--&gt;-->
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/restaurant_image"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:src="@drawable/splashscreen"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:id="@+id/restaurant_name"-->
+                <!--android:text="Name of book"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:background="#4f0e0d0e"-->
+                <!--android:textSize="14.5sp"-->
+                <!--android:visibility="gone"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+                <!--</android.support.v7.widget.CardView>-->
+                <ImageView
+                    android:id="@+id/restaurant_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/splashscreen" />
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Name of book"
+                    android:textColor="@android:color/black"
+                    android:textSize="14.5sp" />
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Author:"
+                    android:textColor="@android:color/black"
+                    android:textSize="14.5sp" />
+
+                <RelativeLayout
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/mrp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="MRP: 200 Free"
+                        android:textColor="@android:color/black"
+                        android:textSize="14.5sp" />
+
+                    <TextView
+                        android:id="@+id/shippinghandling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:text="Shipping/Handeling"
+                        android:textColor="@android:color/black"
+                        android:textSize="14.5sp" />
+
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/donatorimage"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/splashscreen" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/donate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Donated by"
+                        android:textColor="@android:color/black"
+                        android:textSize="14.5sp" />
+
+                    <TextView
+                        android:id="@+id/shipingdetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end|right"
+                        android:gravity="end|right|center_vertical"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="14.5sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#999999" />
+
+                <RelativeLayout
+                    android:id="@+id/l3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Delivery by"
+                        android:textColor="#000000"
+                        android:textSize="14.5sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/cash_on_delivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cash On Delivery"
+                            android:textColor="#000000"
+                            android:textSize="14.5sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Available"
+                            android:textColor="#000000"
+                            android:textSize="14.5sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_border1"
+                    android:padding="18dp">
+
+                    <EditText
+                        android:id="@+id/apply_coupon_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/tv_apply_coupon"
+                        android:background="#00ffffff"
+                        android:hint="Pincode"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_apply_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="CHANGE"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="#d99240"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#999999" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/specialoffer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Special offer"
+                        android:textColor="@android:color/black"
+                        android:textSize="14.5sp" />
+
+                    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:id="@+id/sploff"-->
+                    <!--android:layout_width="15dp"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_height="15dp"-->
+                    <!--android:src="@drawable/default_dot"-->
+                    <!--/>-->
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="5dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#999999" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="VIEW MORE DETAILS"
+                        android:textColor="@android:color/black"
+                        android:textSize="14.5sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#999999" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="REVIEW OF OUR PRODUCT AND SERVICES"
+                        android:textColor="@android:color/black"
+                        android:textSize="14.5sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#999999" />
+
+                <Button
+                    android:id="@+id/add_to_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="#008cff"
+                    android:text="ADD TO CART"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/productfullview_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+
+
+</FrameLayout>
+
+
+    <!--<TextView--><!--android:id="@+id/author"--><!--android:text="Author:"--><!--android:padding="10dp"--><!--android:textColor="@android:color/black"--><!--android:textSize="14.5sp"-->
+
+    <!--android:layout_below="@+id/title"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content" />-->
+
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:id="@+id/l1"--><!--android:orientation="horizontal"--><!--android:layout_below="@+id/author"--><!--android:layout_height="wrap_content"--><!--android:weightSum="2"--><!--&gt;-->
+
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/mrp"&ndash;&gt;--><!--&lt;!&ndash;android:text="MRP: "&ndash;&gt;--><!--&lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="14.5sp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;--><!--&lt;!&ndash;android:padding="10dp"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<android.support.v4.widget.Space&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="90sp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/shippinghandling"&ndash;&gt;--><!--&lt;!&ndash;android:text="Shipping/Handeling"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="center_vertical|end|right"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="14.5sp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;--><!--&lt;!&ndash;android:padding="10dp"/>&ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+
+    <!--<android.support.v4.widget.Space--><!--android:layout_width="10sp"--><!--android:id="@+id/s1"--><!--android:layout_below="@+id/l1"--><!--android:layout_height="10dp" />-->
+
+    <!--<LinearLayout--><!--android:layout_width="wrap_content"--><!--android:orientation="horizontal"--><!--android:layout_below="@+id/s1"--><!--android:id="@+id/l2"--><!--android:layout_height="wrap_content"--><!--&gt;-->
+
+
+    <!--<LinearLayout--><!--android:layout_width="wrap_content"--><!--android:orientation="vertical"--><!--android:layout_height="wrap_content">-->
+
+    <!--&lt;!&ndash;<de.hdodenhof.circleimageview.CircleImageView&ndash;&gt;--><!--&lt;!&ndash;xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/donatorimage"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="45dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="45dp"&ndash;&gt;--><!--&lt;!&ndash;android:src="@drawable/splashscreen"&ndash;&gt;--><!--&lt;!&ndash;android:layout_margin="10dp"/>&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/donate"&ndash;&gt;--><!--&lt;!&ndash;android:text="Donated by"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="end"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="14.5sp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:padding="10dp"/>&ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--<android.support.v4.widget.Space--><!--android:layout_width="110sp"--><!--android:layout_height="wrap_content" />-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/shipingdetails"&ndash;&gt;--><!--&lt;!&ndash;android:text="xxxxxxx"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="center_vertical|end|right"&ndash;&gt;--><!--&lt;!&ndash;android:gravity="end|right|center_vertical"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="14.5sp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+
+    <!--</LinearLayout>--><!--<LinearLayout--><!--android:layout_width="wrap_content"--><!--android:orientation="horizontal"--><!--android:id="@+id/l3"--><!--android:layout_marginTop="10dp"--><!--android:layout_below="@+id/l2"--><!--android:layout_height="wrap_content">-->
+
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="14.5sp"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="#000000"&ndash;&gt;--><!--&lt;!&ndash;android:lineSpacingExtra="6.5sp"&ndash;&gt;--><!--&lt;!&ndash;tools:text="Delivery by"&ndash;&gt;--><!--&lt;!&ndash;/>&ndash;&gt;-->
+
+    <!--<android.support.v4.widget.Space--><!--android:layout_width="110sp"--><!--android:layout_height="wrap_content" />-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="14.5sp"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="#000000"&ndash;&gt;--><!--&lt;!&ndash;android:lineSpacingExtra="6.5sp"&ndash;&gt;--><!--&lt;!&ndash;tools:text="Cash On Delivery&ndash;&gt;--><!--&lt;!&ndash;Available " />&ndash;&gt;--><!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/l4"&ndash;&gt;--><!--&lt;!&ndash;android:orientation="horizontal"&ndash;&gt;--><!--&lt;!&ndash;android:layout_below="@+id/l3"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:padding="18dp"&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/rl_edit"&ndash;&gt;--><!--&lt;!&ndash;android:background="@drawable/bg_border1">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<EditText&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:background="#00ffffff"&ndash;&gt;--><!--&lt;!&ndash;android:layout_marginRight="10dp"&ndash;&gt;--><!--&lt;!&ndash;android:hint="Pincode"&ndash;&gt;--><!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="14sp"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="#000000"&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/apply_coupon_edit"&ndash;&gt;--><!--&lt;!&ndash;android:layout_toLeftOf="@+id/tv_apply_coupon"/>&ndash;&gt;--><!--&lt;!&ndash;<TextView&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:text="CHANGE"&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/tv_apply_coupon"&ndash;&gt;--><!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="#d99240"&ndash;&gt;--><!--&lt;!&ndash;android:textAppearance="@style/TextAppearance.AppCompat.Small"&ndash;&gt;--><!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;--><!--&lt;!&ndash;android:layout_centerVertical="true"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/l5"&ndash;&gt;--><!--&lt;!&ndash;android:layout_below="@+id/l4"&ndash;&gt;--><!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/specialoffer"&ndash;&gt;--><!--&lt;!&ndash;android:text="Special offer"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="end"&ndash;&gt;--><!--&lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;--><!--&lt;!&ndash;android:textSize="14.5sp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<de.hdodenhof.circleimageview.CircleImageView&ndash;&gt;--><!--&lt;!&ndash;xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/sploff"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="15dp"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="center_horizontal"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="15dp"&ndash;&gt;--><!--&lt;!&ndash;android:src="@drawable/default_dot"&ndash;&gt;--><!--&lt;!&ndash;/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+

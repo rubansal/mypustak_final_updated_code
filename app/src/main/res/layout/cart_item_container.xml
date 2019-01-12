@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+****
+@author: Anubhav Kumar
+****
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:padding="10dp"
+    android:background="@color/white"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:id="@+id/cart_container_linear">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/ic_launcher"
+            android:layout_gravity="center"
+            android:id="@+id/cart_container_image"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="3"
+            android:weightSum="4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="BOOK TITLE:"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:id="@+id/cart_container_title"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="MRP: 224"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:id="@+id/cart_container_mrp"
+                />
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="QTY: 1"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:id="@+id/cart_containers_quantity"-->
+                <!--/>-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp">
+                
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/minus_button"
+                    android:background="@drawable/ic_indeterminate_check_box_black_24dp"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/minus_button"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/cart_containers_quan"/>
+
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/cart_containers_quan"
+                    android:textAlignment="center"
+                    android:id="@+id/plus_button"
+                    android:background="@drawable/ic_add_box_black_24dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="SHIPPING+HANDELLING:"
+                android:textSize="13sp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:id="@+id/cart_container_shipping"
+                />
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:weightSum="4"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_marginLeft="20dp">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text=""-->
+                <!--android:gravity="center"-->
+                <!--android:id="@+id/orders_price"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:id="@+id/orders_shipping"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:id="@+id/orders_cod"-->
+                <!--android:gravity="center"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text=""-->
+                <!--android:textSize="18dp"-->
+                <!--android:textAlignment="textStart"-->
+                <!--android:id="@+id/cart_items_shipping_price"-->
+                <!--android:gravity="center"-->
+                <!--/>-->
+
+        <!--</LinearLayout>-->
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cart_container_linear"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_button"
+            android:layout_weight="1"
+            android:text="REMOVE"
+            android:textColor="#008cff"
+            android:layout_marginRight="10dp"
+            android:id="@+id/cart_container_remove"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_button"
+            android:layout_weight="1"
+            android:text="MOVE TO WISHLIST"
+            android:layout_marginLeft="10dp"
+            android:textColor="#008cff"
+            android:id="@+id/cart_container_wishlist"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

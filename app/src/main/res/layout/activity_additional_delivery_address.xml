@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+****
+@author: Anubhav Kumar
+****
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AdditionalDeliveryAddress"
+    android:background="#f8f8f8">
+
+
+    <include layout="@layout/general_toolbar"
+        android:id="@+id/additional_delivery_toolbar"/>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/maintop"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@android:color/white"-->
+        <!--android:minHeight="?android:attr/actionBarSize" >-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/navigationnn"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:padding="5dp"-->
+            <!--android:src="@drawable/back_icon"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="DELIVERY ADDRESS"-->
+            <!--android:layout_centerInParent="true"-->
+
+            <!--android:maxLines="1"-->
+            <!--android:textColor="#3f3e3e"-->
+            <!--android:textSize="20sp"-->
+            <!--/>-->
+
+
+
+
+
+    <!--</RelativeLayout>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/additional_delivery_toolbar"
+        android:layout_margin="10dp"
+        android:layout_above="@id/add_another_address">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_another_address"
+        android:background="@drawable/blue_button"
+        android:text="ADD ANOTHER ADDRESS"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/linear_layot_button"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:id="@+id/linear_layot_button">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/additional_delivery_remove"
+            android:layout_weight="1"
+            android:background="@drawable/black_button"
+            android:textSize="22.5sp"
+            android:text="REMOVE"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:id="@+id/additional_delivery_edit"
+            android:textSize="22.5sp"
+            android:text="EDIT"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

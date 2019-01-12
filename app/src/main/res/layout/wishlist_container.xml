@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@drawable/grey_border_box"
+       android:padding="7dp"
+       android:id="@+id/relative"
+       >
+       <ImageView
+           android:layout_width="130dp"
+           android:layout_height="160dp"
+           android:id="@+id/g1"
+
+           android:layout_marginTop="8dp"
+           android:background="#cdcdcd"
+
+           />
+       <TextView
+           android:layout_width="130dp"
+           android:layout_height="25dp"
+           android:text="Category"
+           android:gravity="center"
+           android:layout_marginTop="2dp"
+           android:textSize="15sp"
+           android:background="@drawable/grey_border_box"
+           android:id="@+id/txt"
+           android:textColor="#616161"
+           android:layout_below="@+id/g1"
+
+           />
+       <TextView
+           android:layout_width="130dp"
+           android:layout_height="wrap_content"
+           android:text="Bok Name"
+           android:gravity="center"
+           android:textSize="15sp"
+           android:id="@+id/bookname1"
+           android:textColor="#616161"
+           android:layout_below="@+id/txt"
+            />
+
+       <TextView
+           android:layout_width="130dp"
+           android:layout_height="wrap_content"
+           android:text="MRP"
+           android:gravity="center"
+           android:textSize="15sp"
+           android:id="@+id/bookname2"
+           android:textStyle="bold"
+           android:textColor="#616161"
+           android:layout_below="@+id/bookname1"
+            />
+       <TextView
+           android:layout_width="130dp"
+           android:layout_height="wrap_content"
+           android:text="Author"
+           android:gravity="center"
+           android:textSize="15sp"
+           android:id="@+id/bookname3"
+           android:textColor="#616161"
+           android:layout_below="@+id/bookname2"
+            />
+
+
+
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@id/relative"
+        android:padding="7dp"
+        android:background="@drawable/grey_border_box">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:text="Add to cart"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="#2f2f2f"
+            android:textAlignment="center"
+
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

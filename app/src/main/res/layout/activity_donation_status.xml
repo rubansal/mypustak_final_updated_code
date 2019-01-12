@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+****
+@author: Anubhav Kumar
+****
+-->
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DonationStatus"
+    android:background="#f8f8f8">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/maintop"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:background="@android:color/white"-->
+            <!--android:minHeight="?android:attr/actionBarSize" >-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/navigationnn"-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:padding="5dp"-->
+                <!--android:src="@drawable/back_icon"/>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_title"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--&gt;-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/change_password"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:text="DONATION STATUS"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:textColor="#3f3e3e"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold"/>-->
+
+            <!--</RelativeLayout>-->
+        <!--</RelativeLayout>-->
+
+        <include layout="@layout/general_toolbar"
+            android:id="@+id/donation_status_toolbar"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/donation_status_toolbar"
+            android:background="@color/white"
+            android:layout_margin="10dp"
+            android:id="@+id/donation_status_relative"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/green_border"
+                android:id="@+id/donation_status_userpic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/donation_status_userpic"
+                android:layout_centerHorizontal="true"
+                android:text="Donor Name"
+                android:textSize="19.5sp"
+                android:id="@+id/donation_status_username"
+                android:textColor="#4bc845"
+                android:textStyle="bold"
+                android:padding="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="20 Books"
+                android:lineSpacingExtra="-4sp"
+                android:textColor="#4bc845"
+                android:layout_alignParentStart="true"
+                android:id="@+id/donation_status_number_books"
+                android:layout_below="@+id/donation_status_username"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/donation_status_number_books"
+                android:id="@+id/donation_status_donatedtext"
+                android:text="Donated So Far"
+                android:textSize="19.5sp"
+                android:textColor="#979797"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="5"
+                android:lineSpacingExtra="-4sp"
+                android:textColor="#4bc845"
+
+                android:layout_alignParentEnd="true"
+                android:id="@+id/donation_status_reader_numbers"
+                android:layout_below="@+id/donation_status_username"
+                android:layout_marginRight="85dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/donation_status_number_books"
+                android:id="@+id/donation_status_helped_usertext"
+                android:text="Helped Readers"
+                android:textSize="19.5sp"
+                android:textColor="#979797"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="2"
+                android:lineSpacingExtra="-4sp"
+                android:textColor="#4bc845"
+                android:layout_alignParentStart="true"
+                android:id="@+id/donation_status_number_tree_numbers"
+                android:layout_below="@+id/donation_status_donatedtext"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/donation_status_number_tree_numbers"
+                android:id="@+id/donation_status_tree_text"
+                android:text="Tree Saved"
+                android:textSize="19.5sp"
+                android:textColor="#979797"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="5 Kg"
+                android:lineSpacingExtra="-4sp"
+                android:textColor="#4bc845"
+
+                android:layout_alignParentEnd="true"
+                android:id="@+id/donation_status_co2_numbers"
+                android:layout_below="@+id/donation_status_helped_usertext"
+                android:layout_marginRight="65dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/donation_status_co2_numbers"
+                android:text="CO2 Reduced"
+                android:textSize="19.5sp"
+                android:textColor="#979797"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/donation_status_tree_text"
+                android:background="@mipmap/layer3"
+                />
+
+
+            <!--android:background="@drawable/layer_3"-->
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/donation_status_relative"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/grey_border_box"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Book Pickup date:"
+                    android:textSize="14.5sp"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    android:textAlignment="textStart"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text=""
+                    android:textSize="14.5sp"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:id="@+id/donation_status_pickup_date"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No of Books:"
+                    android:textSize="14.5sp"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    android:textAlignment="textStart"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="14.5sp"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:id="@+id/donation_status_number"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Weight:"
+                    android:textSize="14.5sp"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    android:textAlignment="textStart"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="14.5sp"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:id="@+id/donation_status_no"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Status"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/white_button"
+                    />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Details"
+
+                    android:background="@drawable/white_button"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>
